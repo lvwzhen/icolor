@@ -1,79 +1,135 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 
-  <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Icolor : The beautiful color scheme" />
+<head>
+    <meta charset="UTF-8">
+    <title>iColor</title>
+    <style>
+    body {
+        text-align:center;
+        -webkit-font-smoothing:antialiased;
+        font-smoothing:antialiased;
+        font-family:'Helvetica', sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    h1 {
+        font-weight: 100;
+        font-size: 30px;
+        color: #333;
+    }
+    a,a:hover{
+        color: #333;
+        text-decoration: none;
+        transition: .2s;
+    }
+    a:hover{
+        color: #919191;
+        transition: .2s;
+    }
+    .content {
+        margin: 30px 0 0;
+    }
+    .container {
+        height: 100%;
+        height: 100vh;
+        display: table;
+        word-spacing: -1em;
+        width: 100%;
+        position: relative;
+    }
+    .color-item {
+        display: inline-block;
+        *display: inline;
+        *zoom: 1;
+        vertical-align: top;
+        width: 50%;
+        height: 100%;
+        word-spacing: 0;
+    }
+    .color-box {
+        position: absolute;
+        width: 600px;
+        top: 30%;
+        left: 50%;
+        margin-left: -300px;
+        height: 100px;
+        word-spacing: 0;
+    }
+    .color-box p{
+        text-align: center;
+        font-size: 18px;
+        font-weight: 100;
+        padding-top: 50px;
+        float: left;
+        width: 100%;
+        color: #919191;
+    }
+    .color-circle {
+        width: 80px;
+        height: 80px;
+        -webkit-border-radius: 40px;
+        -moz-border-radius: 40px;
+        border-radius: 40px;
+        margin: 0 auto;
+        float: left;
+        margin: 20px;
+    }
+    .clearfix:after, .clearfix:before {
+        display:table;
+        content:"";
+    }
+    .clearfix:after {
+        clear:both;
+    }
+    .clearfix {
+        zoom:1;
+    }
+    /*iOS7*/
+    .ios7 .cl {
+        background-color: #fff;
+    }
+    .ios7 .cr {
+        background-color: #f7f7f7;
+    }
+    /*eboy*/
+    .eboy .cl{
+        background-color: #ecf7fd;
+    }
+    .eboy .cr{
+        background-color: #bbe4f9;
+    }
+    </style>
+</head>
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>Icolor</title>
-  </head>
-
-  <body>
-
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/lvwzhen/icolor">View on GitHub</a>
-
-          <h1 id="project_title">Icolor</h1>
-          <h2 id="project_tagline">The beautiful color scheme</h2>
-
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/lvwzhen/icolor/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/lvwzhen/icolor/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
+<body>
+    <h1><a href="http://lvwzhen.github.io/icolor">iColor</a></h1>
+    <div class="content">
+        <div class="container ios7">
+            <div class="color-item cl"></div>
+            <div class="color-item cr"></div>
+            <div class="color-box clearfix">
+                <div class="color-circle" style="background: #2189f7;"></div>
+                <div class="color-circle" style="background: #3e9ff8;"></div>
+                <div class="color-circle" style="background: #6cc5fa;"></div>
+                <div class="color-circle" style="background: #dbdce0;"></div>
+                <div class="color-circle" style="background: #000000;"></div>
+                <p>iOS 7</p>
+            </div>
+        </div>
+         <div class="container eboy">
+            <div class="color-item cl"></div>
+            <div class="color-item cr"></div>
+            <div class="color-box clearfix">
+                <div class="color-circle" style="background: #c19b69;"></div>
+                <div class="color-circle" style="background: #cf4942;"></div>
+                <div class="color-circle" style="background: #00a5e0;"></div>
+                <div class="color-circle" style="background: #769600;"></div>
+                <div class="color-circle" style="background: #af588f;"></div>
+                <p>eBoy</p>
+            </div>
+        </div>
     </div>
+</body>
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
-
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
-
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
-
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
-
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
-
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
-
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Icolor maintained by <a href="https://github.com/lvwzhen">lvwzhen</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
-    
-
-  </body>
 </html>
