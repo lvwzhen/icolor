@@ -7,17 +7,17 @@
     <link rel="shortcut icon" href="favicon.ico" />
     <style>
     body {
-        text-align:center;
-        -webkit-font-smoothing:antialiased;
-        font-smoothing:antialiased;
-        font-family:'Helvetica', sans-serif;
         margin: 0;
         padding: 0;
+        text-align:center;
+        font-family:'Helvetica', sans-serif;
+        -webkit-font-smoothing:antialiased;
+        font-smoothing:antialiased;
     }
     h1 {
+        color: #333;
         font-weight: 100;
         font-size: 30px;
-        color: #333;
     }
     a, a:hover {
         color: #333;
@@ -32,49 +32,83 @@
         margin: 30px 0 0;
     }
     .container {
+        position: relative;
+        display: table;
+        width: 100%;
         height: 100%;
         height: 100vh;
-        display: table;
         word-spacing: -1em;
-        width: 100%;
-        position: relative;
     }
     .color-item {
         display: inline-block;
-        *display: inline;
-        *zoom: 1;
-        vertical-align: top;
         width: 50%;
         height: 100%;
+        vertical-align: top;
         word-spacing: 0;
+        *display: inline;
+        *zoom: 1;
     }
     .color-box {
         position: absolute;
-        width: 600px;
         top: 30%;
         left: 50%;
         margin-left: -300px;
+        width: 600px;
         height: 100px;
         word-spacing: 0;
     }
     .color-box p {
-        text-align: center;
-        font-size: 18px;
-        font-weight: 100;
-        padding-top: 50px;
         float: left;
+        padding-top: 50px;
         width: 100%;
         color: #686868;
+        text-align: center;
+        font-weight: 100;
+        font-size: 18px;
     }
     .color-circle {
+        position: relative;
+        float: left;
+        margin: 0 auto;
+        margin: 20px;
         width: 80px;
         height: 80px;
         -webkit-border-radius: 40px;
         -moz-border-radius: 40px;
         border-radius: 40px;
-        margin: 0 auto;
-        float: left;
-        margin: 20px;
+        cursor: pointer;
+    }
+    .tips {
+        position: absolute;
+        top: -20px;
+        z-index: 2;
+        margin-left: 0;
+        padding: 3px 5px;
+        width: 70px;
+        border-radius: 3px;
+        background-color: rgba(0, 0, 0, 0.8);
+        color: #fff;
+        text-align: center;
+        letter-spacing: .5px;
+        opacity: 0;
+        transition: all .3s;
+    }
+    .tips.on {
+        top: -37px;
+        opacity: 1;
+        transition: all .5s;
+    }
+    .tips:after {
+        position: absolute;
+        top: 24px;
+        left: 35px;
+        z-index: 1;
+        width: 0;
+        height: 0;
+        border-top: 5px solid rgba(0, 0, 0, 0.8);
+        border-right: 5px solid transparent;
+        border-left: 5px solid transparent;
+        content:'';
     }
     .clearfix:after, .clearfix:before {
         display:table;
@@ -95,84 +129,110 @@
     <div class="content">
 
         <div class="container ios7">
-            <div class="color-item" style="background: #ffffff;"></div>
-            <div class="color-item" style="background: #f7f7f7;"></div>
+            <div class="color-item" style="background-color: #ffffff;"></div>
+            <div class="color-item" style="background-color: #f7f7f7;"></div>
             <div class="color-box clearfix">
-                <div class="color-circle" style="background: #2189f7;"></div>
-                <div class="color-circle" style="background: #3e9ff8;"></div>
-                <div class="color-circle" style="background: #6cc5fa;"></div>
-                <div class="color-circle" style="background: #dbdce0;"></div>
-                <div class="color-circle" style="background: #000000;"></div>
+                <div class="color-circle" style="background-color: #2189f7;"></div>
+                <div class="color-circle" style="background-color: #3e9ff8;"></div>
+                <div class="color-circle" style="background-color: #6cc5fa;"></div>
+                <div class="color-circle" style="background-color: #dbdce0;"></div>
+                <div class="color-circle" style="background-color: #000000;"></div>
                 <p>iOS 7</p>
             </div>
         </div>
 
         <div class="container eboy">
-            <div class="color-item" style="background: #ecf7fd;"></div>
-            <div class="color-item" style="background: #bbe4f9;"></div>
+            <div class="color-item" style="background-color: #ecf7fd;"></div>
+            <div class="color-item" style="background-color: #bbe4f9;"></div>
             <div class="color-box clearfix">
-                <div class="color-circle" style="background: #c19b69;"></div>
-                <div class="color-circle" style="background: #cf4942;"></div>
-                <div class="color-circle" style="background: #00a5e0;"></div>
-                <div class="color-circle" style="background: #769600;"></div>
-                <div class="color-circle" style="background: #af588f;"></div>
+                <div class="color-circle" style="background-color: #c19b69;"></div>
+                <div class="color-circle" style="background-color: #cf4942;"></div>
+                <div class="color-circle" style="background-color: #00a5e0;"></div>
+                <div class="color-circle" style="background-color: #769600;"></div>
+                <div class="color-circle" style="background-color: #af588f;"></div>
                 <p>eBoy</p>
             </div>
         </div>
 
         <div class="container flat">
-            <div class="color-item" style="background: #ffffff;"></div>
-            <div class="color-item" style="background: #ecf0f1;"></div>
+            <div class="color-item" style="background-color: #ffffff;"></div>
+            <div class="color-item" style="background-color: #ecf0f1;"></div>
             <div class="color-box clearfix">
-                <div class="color-circle" style="background: #1abc9c;"></div>
-                <div class="color-circle" style="background: #3498db;"></div>
-                <div class="color-circle" style="background: #e74c3c;"></div>
-                <div class="color-circle" style="background: #2ecc71;"></div>
-                <div class="color-circle" style="background: #34495e;"></div>
+                <div class="color-circle" style="background-color: #1abc9c;"></div>
+                <div class="color-circle" style="background-color: #3498db;"></div>
+                <div class="color-circle" style="background-color: #e74c3c;"></div>
+                <div class="color-circle" style="background-color: #2ecc71;"></div>
+                <div class="color-circle" style="background-color: #34495e;"></div>
                 <p>Flat</p>
             </div>
         </div>
 
         <div class="container facebook">
-            <div class="color-item" style="background: #f7f7f7;"></div>
-            <div class="color-item" style="background: #fffff;"></div>
+            <div class="color-item" style="background-color: #f7f7f7;"></div>
+            <div class="color-item" style="background-color: #fffff;"></div>
             <div class="color-box clearfix">
-                <div class="color-circle" style="background: #3b5998;"></div>
-                <div class="color-circle" style="background: #8b9dc3;"></div>
-                <div class="color-circle" style="background: #dfe3ee;"></div>
-                <div class="color-circle" style="background: #333333;"></div>
-                <div class="color-circle" style="background: #808080;"></div>
+                <div class="color-circle" style="background-color: #3b5998;"></div>
+                <div class="color-circle" style="background-color: #8b9dc3;"></div>
+                <div class="color-circle" style="background-color: #dfe3ee;"></div>
+                <div class="color-circle" style="background-color: #333333;"></div>
+                <div class="color-circle" style="background-color: #808080;"></div>
                 <p>Facebook</p>
             </div>
         </div>
 
         <div class="container google">
-            <div class="color-item" style="background: #ebebeb;"></div>
-            <div class="color-item" style="background: #f1f1f1;"></div>
+            <div class="color-item" style="background-color: #ebebeb;"></div>
+            <div class="color-item" style="background-color: #f1f1f1;"></div>
             <div class="color-box clearfix">
-                <div class="color-circle" style="background: #3366cc;"></div>
-                <div class="color-circle" style="background: #dd4b39;"></div>
-                <div class="color-circle" style="background: #ffc001;"></div>
-                <div class="color-circle" style="background: #009a56;"></div>
-                <div class="color-circle" style="background: #333333;"></div>
+                <div class="color-circle" style="background-color: #3366cc;"></div>
+                <div class="color-circle" style="background-color: #dd4b39;"></div>
+                <div class="color-circle" style="background-color: #ffc001;"></div>
+                <div class="color-circle" style="background-color: #009a56;"></div>
+                <div class="color-circle" style="background-color: #333333;"></div>
                 <p>Google</p>
             </div>
         </div>
 
         <div class="container olympic">
-            <div class="color-item" style="background: #f5f5f5;"></div>
-            <div class="color-item" style="background: #ffffff;"></div>
+            <div class="color-item" style="background-color: #f5f5f5;"></div>
+            <div class="color-item" style="background-color: #ffffff;"></div>
             <div class="color-box clearfix">
-                <div class="color-circle" style="background: #0085c7;"></div>
-                <div class="color-circle" style="background: #f4c300;"></div>
-                <div class="color-circle" style="background: #000000;"></div>
-                <div class="color-circle" style="background: #009f3d;"></div>
-                <div class="color-circle" style="background: #df0024;"></div>
+                <div class="color-circle" style="background-color: #0085c7;"></div>
+                <div class="color-circle" style="background-color: #f4c300;"></div>
+                <div class="color-circle" style="background-color: #000000;"></div>
+                <div class="color-circle" style="background-color: #009f3d;"></div>
+                <div class="color-circle" style="background-color: #df0024;"></div>
                 <p>Olympic</p>
             </div>
         </div>
 
     </div>
+
+    <script src="http://cdn.staticfile.org/jquery/2.1.1-rc2/jquery.min.js"></script>
+    <script>
+    //遍历添加 tips
+    $('.color-circle').each(function() {
+        //转换16进制颜色
+        function hex(x) {
+            return ("0" + parseInt(x).toString(16)).slice(-2);
+        }
+        var bgc = $(this).css("background-color");
+        var rgb = bgc.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
+        rgb = "#" + hex(rgb[1]) + hex(rgb[2]) + hex(rgb[3]);
+        var $tips = $('<div class="tips"></div>');
+        $tips.text(rgb);
+        $(this).append($tips);
+    });
+    //添加 hover 动作
+    $('.color-circle').hover(function() {
+        if ($(this).children().hasClass('on')) {
+            $(this).children().removeClass('on')
+        } else {
+            $(this).children().addClass('on')
+        };
+    });
+    
+    </script>
 </body>
 
 </html>
